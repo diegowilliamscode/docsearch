@@ -1,3 +1,6 @@
 set -e
 javac DocSearchServer.java javac Server.java
-java DocSearchServer < $1 "/searchq="$2
+port = $1
+search = "/searchq="$2
+
+java DocSearchServer < $port $search
